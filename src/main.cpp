@@ -1,4 +1,4 @@
-//    Copyright (C) 2006-2017 Amir Baserinia
+// Copyright (C) 2005-2017 Amir Baserinia
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -18,9 +18,6 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 //
-//------------------------------------------------------------------------------
-// Created on: 15 Mar 2005
-// Last update: 30 Jun 2017
 //------------------------------------------------------------------------------
 
 #include <iostream>
