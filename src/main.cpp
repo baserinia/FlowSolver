@@ -1,25 +1,27 @@
-//	Copyright (C) 2006  Amir R. Baserinia
+//    Copyright (C) 2006-2017 Amir Baserinia
 //
-// 	This file is part of SMAIF (Simple Mesh Adaptor for Incompressible Flow)
+// Permission is hereby granted, free of charge, to any person obtaining a copy
+// of this software and associated documentation files (the "Software"), to deal
+// in the Software without restriction, including without limitation the rights
+// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+// copies of the Software, and to permit persons to whom the Software is
+// furnished to do so, subject to the following conditions:
 //
-//	SMAIF is free software; you can redistribute it and/or modify
-//	it under the terms of the GNU General Public License as published by
-//	the Free Software Foundation; either version 2 of the License, or
-//	(at your option) any later version.
+// The above copyright notice and this permission notice shall be included in
+// all copies or substantial portions of the Software.
+
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+// SOFTWARE.
 //
-//	SMAIF is distributed in the hope that it will be useful,
-//	but WITHOUT ANY WARRANTY; without even the implied warranty of
-//	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-//	GNU General Public License for more details.
-//
-//	You should have received a copy of the GNU General Public License
-//	along with SMAIF; if not, write to the Free Software
-//	Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
-//
-//----------------------------------------------------------------------------
-// Created on:	15 Mar 2005
-// Last update:	20 Jun 2005
-//-----------------------------------------------------------------------------
+//------------------------------------------------------------------------------
+// Created on: 15 Mar 2005
+// Last update: 30 Jun 2017
+//------------------------------------------------------------------------------
 
 #include <iostream>
 #include <exception>
@@ -28,32 +30,29 @@
 #include "my_except.h"
 #include "control.h"
 
-//---( main )---
-// the main function of the code
-int 
-main( int argc , char *argv[] )
+int main(int argc , char *argv[])
 {
-	NIFS::c_control control;
+    NIFS::c_control control;
 
-	try {	
-		control.initialize( argc, argv ); // initilize the solver
-		control.solve();                  // solve the problem
-//		control.shutdown();               // shutdown the process
-	}
-	catch ( const NIFS::my_except& e ) {
-		std::cerr << "Error: " << e.what() << std::endl;
-		return EXIT_FAILURE;
-	}
-	catch ( const std::exception& e ) {
-		std::cerr << "System Error: " << e.what() << std::endl;
-		return EXIT_FAILURE;
-	}
-	catch ( ... ) {
-		std::cerr << "Unknown Error." << std::endl;
-		return EXIT_FAILURE;
-	}
+    try {
+        control.initialize(argc, argv); // initilize the solver
+        control.solve();                  // solve the problem
+//      control.shutdown();               // shutdown the process
+    }
+    catch (const NIFS::my_except& e) {
+        std::cerr << "Error: " << e.what() << std::endl;
+        return EXIT_FAILURE;
+    }
+    catch (const std::exception& e) {
+        std::cerr << "System Error: " << e.what() << std::endl;
+        return EXIT_FAILURE;
+    }
+    catch (...) {
+        std::cerr << "Unknown Error." << std::endl;
+        return EXIT_FAILURE;
+    }
 
-	std::cout << "Execution terminated normally." << std::endl;
+    std::cout << "Execution terminated normally." << std::endl;
 
-  return EXIT_SUCCESS;
+    return EXIT_SUCCESS;
 }
