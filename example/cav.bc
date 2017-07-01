@@ -1,43 +1,43 @@
 % problem boundary conditions
 %
 % bnd_type: 
-%	1	inflow
-%	2	outflow
-%	3	symmetric
-%	4	wall - Dirichlet 
-%	5	wall - Neumann
-%	6	wall - Dirichlet w/ prescribed pressure
+% 1    inflow
+% 2    outflow
+% 3    symmetric
+% 4    wall - Dirichlet 
+% 5    wall - Neumann
+% 6    wall - Dirichlet with prescribed pressure
 % note:
-%	use RPN ( Reverse Polish Notation )
+%    use RPN (Reverse Polish Notation aka post-fix)
 %
 %---------------------------
-bnd_num			5		eq
+bnd_num    5        eq  % 5 boundaries
 
-bnd_type1		4		eq	% wall
-velu1			0.0		eq
-velv1			0.0		eq
-temp1			0.0		eq
+bnd_type1  4        eq  % wall
+velu1      0.0      eq  % u-velocity = 0
+velv1      0.0      eq  % v-velocity = 0
+temp1      0.0      eq  % temperature = 0
 
-bnd_type2		4		eq	% wall
-velu2			0.0		eq
-velv2			0.0		eq
-temp2			0.0		eq
+bnd_type2  4        eq  % wall
+velu2      0.0      eq
+velv2      0.0      eq
+temp2      0.0      eq
 
 
-bnd_type3		4		eq	% wall
-velu3			0.0		eq
-velv3			0.0		eq
-temp3			0.0		eq
+bnd_type3  4        eq  % wall
+velu3      0.0      eq
+velv3      0.0      eq
+temp3      0.0      eq
 
-bnd_type4		4		eq	% wall
-velu4			1600.0	eq
-velv4			0.0		eq
-temp4			0.0		eq
+bnd_type4  4        eq  % wall
+velu4      1600.0   eq
+velv4      0.0      eq
+temp4      0.0      eq
 
-bnd_type5		6		eq	% wall prescribed pressure
-pres5			0.0		eq
-velu5			0.0		eq
-velv5			0.0		eq
-temp5			0.0		eq
+bnd_type5  6        eq  % wall prescribed pressure
+pres5      0.0      eq  % pressure = 0
+velu5      0.0      eq
+velv5      0.0      eq
+temp5      0.0      eq
 
 
