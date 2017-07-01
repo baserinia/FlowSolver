@@ -1,0 +1,53 @@
+% problem adjustable parameters
+%
+% acc_order: 	order of accuracy ( 1 or 2 )
+% rho:        density
+% gamma:      thermal diffusivity
+% mu:         dynamic viscosity
+% c_m:        thermal capacity
+% ref_temp:   reference temperature
+% res_trsh:   residual threshold
+% grad_rlx:   gradient relaxation factor
+%
+%-----------------------------------
+solve_puv   1     eq
+solve_t     0     eq
+acc_order   2     eq
+gh_iter     1     eq
+gradient    1     eq
+hessian     0     eq
+hess_acc    0     eq
+grad_pow    0.0   eq
+hess_pow    0.0   eq
+grad_vrt    0     eq
+hess_vrt    0     eq
+soln_rlx    0.8		eq
+grad_rlx    0.8		eq
+hess_rlx    1.0		eq
+rho         1.0		eq
+gamma       1.0		eq
+mu          1.0		eq
+beta        1.0		eq
+c_m         1.0		eq
+g_x         0.0		eq
+g_y         0.0		eq
+ref_temp    1.0		eq
+res_trsh    1E-6	eq
+max_iter    200   eq
+vel_scale   1600	eq
+out_flags   0     eq
+initialize  0     eq
+coef_mat    0     eq
+rhs_vec     0     eq
+bnd_out     1     eq
+soln_out    1     eq
+grad_out    1     eq
+hess_out    1     eq
+drv3_out    0     eq
+solb_out    0     eq
+geom_out    1     eq
+rsdl_out    0     eq
+smt_trsh    1E-4  eq
+smt_iter    5     eq
+adap_trsh   1E-6  eq
+adap_iter   0   eq
